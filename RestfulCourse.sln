@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestfulCourse.API", "RestfulCourse.API\RestfulCourse.API.csproj", "{48D7F09A-5F75-409C-965C-BD1661C1A456}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48D7F09A-5F75-409C-965C-BD1661C1A456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D7F09A-5F75-409C-965C-BD1661C1A456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D7F09A-5F75-409C-965C-BD1661C1A456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D7F09A-5F75-409C-965C-BD1661C1A456}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4DE7BEE-01C6-4025-8ACF-A6BB32809685}
+	EndGlobalSection
+EndGlobal
