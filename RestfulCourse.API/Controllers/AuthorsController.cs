@@ -15,18 +15,24 @@ namespace RestfulCourse.API.Controllers
             _courseLibraryRepository = courseLibraryRepository;
         }
 
-        [HttpGet()]
+        [HttpGet]
         public IActionResult GetAuthors()
         {
             var authorsFromRepo = _courseLibraryRepository.GetAuthors();
-            return new JsonResult(authorsFromRepo);
+            return Ok(authorsFromRepo);
         }
 
         [HttpGet("{authorId}")]
         public IActionResult GetAuthor(Guid authorId)
         {
             var authorsFromRepo = _courseLibraryRepository.GetAuthor(authorId);
-            return new JsonResult(authorsFromRepo);
+            
+            if (authorsFromRepo == null)
+            {
+                return NotFound();
+            }   
+            
+            return Ok(authorsFromRepo);
         }
     }
 }
