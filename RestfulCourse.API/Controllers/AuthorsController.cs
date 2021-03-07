@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using RestfulCourse.API.Helpers;
+using RestfulCourse.API.Models;
 using RestfulCourse.API.Services;
 
 namespace RestfulCourse.API.Controllers
@@ -9,17 +13,19 @@ namespace RestfulCourse.API.Controllers
     public class AuthorsController : Controller
     {
         private readonly ICourseLibraryRepository _courseLibraryRepository;
-
-        public AuthorsController(ICourseLibraryRepository courseLibraryRepository)
+        private readonly IMapper _mapper;
+        public AuthorsController(ICourseLibraryRepository courseLibraryRepository, IMapper mapper)
         {
             _courseLibraryRepository = courseLibraryRepository;
+            _mapper = mapper;
         }
 
         [HttpGet]
-        public IActionResult GetAuthors()
+        public ActionResult<IEnumerable<AuthorDto>> GetAuthors()
         {
             var authorsFromRepo = _courseLibraryRepository.GetAuthors();
-            return Ok(authorsFromRepo);
+            
+            return Ok(_mapper.Map<IEnumerable<AuthorDto>>(authorsFromRepo));
         }
 
         [HttpGet("{authorId}")]
@@ -32,7 +38,7 @@ namespace RestfulCourse.API.Controllers
                 return NotFound();
             }   
             
-            return Ok(authorsFromRepo);
+            return Ok(_mapper.Map<AuthorDto>(authorsFromRepo));
         }
     }
 }
