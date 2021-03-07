@@ -1,4 +1,5 @@
 ﻿using RestfulCourse.API.Entities;
+using RestfulCourse.API.ResourceParameters;
 using System;
 using System.Collections.Generic;
 
@@ -12,6 +13,7 @@ namespace RestfulCourse.API.Services
         void UpdateCourse(Course course);
         void DeleteCourse(Course course);
         IEnumerable<Author> GetAuthors();
+        IEnumerable<Author> GetAuthors(AuthorsResourceParameters authorsResourceParameters);
         Author GetAuthor(Guid authorId);
         IEnumerable<Author> GetAuthors(IEnumerable<Guid> authorIds);
         void AddAuthor(Author author);

@@ -4,6 +4,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using RestfulCourse.API.Helpers;
 using RestfulCourse.API.Models;
+using RestfulCourse.API.ResourceParameters;
 using RestfulCourse.API.Services;
 
 namespace RestfulCourse.API.Controllers
@@ -21,9 +22,10 @@ namespace RestfulCourse.API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<AuthorDto>> GetAuthors()
+        [HttpHead]
+        public ActionResult<IEnumerable<AuthorDto>> GetAuthors([FromQuery] AuthorsResourceParameters authorsResourceParameters)
         {
-            var authorsFromRepo = _courseLibraryRepository.GetAuthors();
+            var authorsFromRepo = _courseLibraryRepository.GetAuthors(authorsResourceParameters);
             
             return Ok(_mapper.Map<IEnumerable<AuthorDto>>(authorsFromRepo));
         }
