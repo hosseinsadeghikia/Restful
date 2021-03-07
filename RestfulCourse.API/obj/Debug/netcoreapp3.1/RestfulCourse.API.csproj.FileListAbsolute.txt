@@ -62,4 +62,3 @@ C:\Users\h.sadeghi\source\repos\RestfulCourse\RestfulCourse.API\bin\Debug\netcor
 C:\Users\h.sadeghi\source\repos\RestfulCourse\RestfulCourse.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\h.sadeghi\source\repos\RestfulCourse\RestfulCourse.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\h.sadeghi\source\repos\RestfulCourse\RestfulCourse.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\h.sadeghi\source\repos\RestfulCourse\RestfulCourse.API\obj\Debug\netcoreapp3.1\RestfulCourse.API.csprojAssemblyReference.cache
