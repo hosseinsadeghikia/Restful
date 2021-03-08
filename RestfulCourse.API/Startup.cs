@@ -26,6 +26,7 @@ namespace RestfulCourse.API
             services.AddControllers(setupAction =>
             {
                 setupAction.ReturnHttpNotAcceptable = true;
+                
             }).AddXmlDataContractSerializerFormatters();
             
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

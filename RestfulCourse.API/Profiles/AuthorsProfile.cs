@@ -16,6 +16,9 @@ namespace RestfulCourse.API.Profiles
                     opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}"))
                 .ForMember(dest => dest.Age,
                     opt => opt.MapFrom(src => src.DateOfBirth.GetCurrentAge()));
+
+            CreateMap<Models.AuthorForCreationDto, Entities.Author>();
+            
         }
     }
 }
