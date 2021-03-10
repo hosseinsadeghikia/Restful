@@ -7,7 +7,9 @@ using RestfulCourse.API.ValidationAttributes;
 
 namespace RestfulCourse.API.Models
 {
-    public class CourseForCreationDto : CourseForManipulationDto
+    public class CourseForUpdateDto : CourseForManipulationDto
     {
+        [Required(ErrorMessage = "You should fill out a description.")]
+        public override string Description { get; set; }
     }
 }
